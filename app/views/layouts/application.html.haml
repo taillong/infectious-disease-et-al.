@@ -8,4 +8,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+      %h1.title IDEA
+      %p.sub-title Infectious Disease et al.
+      
     = yield
+
+    %footer
+      %small Copyright(C) IDEA ALL RIGHTS RESERVED.
