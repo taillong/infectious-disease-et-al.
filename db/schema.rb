@@ -14,16 +14,12 @@ ActiveRecord::Schema.define(version: 2020_05_06_032534) do
 
   create_table "diseases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "graphs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "period_id"
     t.bigint "prefecture_id"
     t.bigint "disease_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["disease_id"], name: "index_graphs_on_disease_id"
     t.index ["period_id"], name: "index_graphs_on_period_id"
     t.index ["prefecture_id"], name: "index_graphs_on_prefecture_id"
@@ -32,14 +28,10 @@ ActiveRecord::Schema.define(version: 2020_05_06_032534) do
   create_table "periods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "year", null: false
     t.integer "week", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "prefectures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "graphs", "diseases"
