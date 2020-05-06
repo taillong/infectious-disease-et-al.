@@ -1,3 +1,18 @@
 header{
+  height: 70px;
+  padding: 0 40px;
   background-color: royalblue;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  .title{
+    font-size: x-large;
+    font-family: sans-serif;
+  } 
+  .subtitle{
+    font-size: x-small;
+    margin-left: 30px;
+  }
+
 }
