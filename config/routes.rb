@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root "graphs#index"
+  root "graphs#new"
+  resources :graphs, only: [ :create]
 end

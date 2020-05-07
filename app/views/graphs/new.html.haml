@@ -1,0 +1,5 @@
+.contents
+  = form_with(model: @graph) do |f|
+    = f.select :prefecture_id, Prefecture.all.map {|prefecture| [prefecture.name, prefecture.id] }
+    = f.select :disease_id, Disease.all.map { |disease| [disease.name, disease.id] }
+    = f.submit 

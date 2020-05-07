@@ -3,7 +3,19 @@
 }
 
 .contents{
+  padding-top: 70px;
   height: calc(100vh - 30px);
   background-color: white;
+}
 
+form{
+  height: 159px;
+  width: 300px;
+  background-color: red;
+}
+
+select{
+  height: 30px;
+  width: 50px;
+  background-color: green;
 }
